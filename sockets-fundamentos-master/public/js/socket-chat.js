@@ -17,6 +17,7 @@ socket.on('connect', function() {
     
     socket.emit('enterChat', user, function( resp ){
         renderUsers(resp);
+        renderChatRoom(user.room);
     });
 });
 
@@ -40,7 +41,9 @@ socket.emit('sendMessage', {
 
 // Escuchar información
 socket.on('createMessage', function(message) {
-    console.log('Servidor:', message);
+    //console.log('Servidor:', message);
+    renderMessages(message, false);
+    scrollBottom();
 });
 
 //Escuchar cambios de usuarios
