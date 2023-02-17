@@ -1,9 +1,9 @@
 # Notas:
 
-Este es un pequeño servidor de express listo para ejecutarse y servir la carpeta public en la web.
-
-Recuerden que deben de reconstruir los módulos de node con el comando
-
+This is a socket chat application
+Run the following commands to run it locally
 ```
-npm install
+1) cd sockets-fundamentos-master
+2) npm install
+3) node server/server
 ```
